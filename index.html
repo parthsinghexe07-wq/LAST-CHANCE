@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ff4f9e">
+<title>Panuu, dekh yrr ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop preload="auto">
+  <source src="assets/him.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music" onclick="toggleMusic()">🎵</button>
+<div id="hearts"></div>
+
+<main class="wrap">
+
+<section class="hero card">
+  <div class="pill">ONE LAST LITTLE THING 💌</div>
+  <h1>Panuu, dekh yrr... 🥹❤️</h1>
+  <p class="lead">
+    Mujhe feelings express karni honestly nahi aati,
+    toh aaj thoda embarrassing hoke hi sahi, bol deta hoon.
+  </p>
+  <button class="mainbtn" onclick="startSite()">Tap karke start kar 🎵</button>
+  <p class="tiny">Music bhi hai. Emotional damage complimentary hai. 😭</p>
+</section>
+
+<section class="card reveal">
+  <p class="tag">PEHLE EK MEME 💀</p>
+  <img src="assets/crush-meme.jpg" alt="crush meme">
+  <p class="caption">Me because my crush may never like me back 😭</p>
+  <p>
+    Haan bhai, situation thodi aisi hi hai.
+    Lekin kam se kam website toh bana sakta tha. 😂
+  </p>
+</section>
+
+<section class="card reveal letter">
+  <p class="tag">AB SERIOUSLY ❤️</p>
+  <h2>Panuu, I think I love you.</h2>
+  <p>
+    "I think" isliye kyunki mujhe khud apni feelings ko words mein
+    explain karna nahi aata. Bas itna pata hai ki <b>tumse baat karke
+    mujhe genuinely achha lagta hai.</b>
+  </p>
+  <p>
+    Tumhara message aaye toh mood better ho jata hai.
+    Tumhare saamne main unnecessarily nervous ho jata hoon.
+    Aur kabhi-kabhi bina reason smile bhi aa jaati hai. 😭
+  </p>
+  <p>
+    Mujhe pata hai <b>tumhe koi aur pasand hai</b> aur tumne bola hai
+    ki tum abhi ready nahi ho. Main uss baat ko ignore nahi kar raha.
+    <b>Take your time.</b> Main tumhe pressure nahi karna chahta.
+  </p>
+</section>
+
+<section class="card reveal highlight">
+  <p class="tag">EK THODI SI FILMY BAAT 👀</p>
+  <h2>Maybe he's what you want...</h2>
+  <h2 class="pink">...aur maybe I'm what you need? 😭👉👈</h2>
+  <p>
+    But honestly, iska answer <b>tum decide karogi</b>.
+    Main tumhari choice ko replace nahi karna chahta.
+    Bas ek baar mujhe as a person jaanne ka chance maang raha hoon.
+  </p>
+</section>
+
+<section class="card reveal">
+  <p class="tag">THE ONE CHANCE I'M ASKING FOR 🫶</p>
+  <h2>Relationship ka promise nahi.</h2>
+  <p>
+    Bas ek simple chance:
+    thoda time, thodi bakbak, ek walk, university explore,
+    aur ek waffle. 🧇
+  </p>
+  <p>
+    Agar uske baad bhi tumhe lage ki nahi,
+    <b>I'll respect that.</b> No drama. No guilt trip.
+  </p>
+</section>
+
+<section class="card reveal poll">
+  <p class="tag">Panuu ki honest poll 📊</p>
+  <h2>Okay madam, sach-sach batao 👀</h2>
+  <p class="tiny">No wrong answer. Main argue nahi karunga. Promise. 🤝</p>
+
+  <label><input type="radio" name="reason" value="time"> Abhi ready nahi hoon</label>
+  <label><input type="radio" name="reason" value="someone"> Mujhe koi aur pasand hai</label>
+  <label><input type="radio" name="reason" value="friend"> Main tujhe friend ki tarah dekhti hoon</label>
+  <label><input type="radio" name="reason" value="feel"> Woh wali feeling nahi hai</label>
+  <label><input type="radio" name="reason" value="other"> Kuch aur hai, baad mein bataungi</label>
+
+  <button class="softbtn" onclick="poll()">Submit honest answer 🥹</button>
+  <div id="pollResult" class="result"></div>
+</section>
+
+<section class="card reveal quiz">
+  <p class="tag">THE "WHY DON'T YOU LIKE ME" QUIZ 😂</p>
+  <h2>Thoda roast kar le mujhe.</h2>
+  <p class="tiny">Scientific research bilkul nahi hai. Sirf bakchodi hai. 💀</p>
+
+  <div class="q">
+    <b>1. Meri sabse badi problem?</b>
+    <select id="q1">
+      <option>Overthinking</option>
+      <option>Gussa / attitude</option>
+      <option>Too much texting 😭</option>
+      <option>Too dramatic</option>
+      <option>Honestly, nothing major 😌</option>
+    </select>
+  </div>
+
+  <div class="q">
+    <b>2. Mujhe kya improve karna chahiye?</b>
+    <select id="q2">
+      <option>Patience</option>
+      <option>Communication</option>
+      <option>Apna gussa</option>
+      <option>Khud pe focus</option>
+      <option>Sab kuch 😂</option>
+    </select>
+  </div>
+
+  <div class="q">
+    <b>3. Ek chance mile toh?</b>
+    <select id="q3">
+      <option>Let's see</option>
+      <option>Maybe later</option>
+      <option>Only as friends</option>
+      <option>Okay, one proper chance</option>
+      <option>Abhi kuch nahi keh sakti</option>
+    </select>
+  </div>
+
+  <button class="softbtn" onclick="quiz()">Reveal result 😂</button>
+  <div id="quizResult" class="result"></div>
+</section>
+
+<section class="card reveal blush">
+  <p class="tag">AGAR KABHI DIL BADLE... 💗</p>
+  <h2>Bas ek "hey" kar dena.</h2>
+  <p>
+    Main overcomplicate nahi karunga.
+    No giant promises. No filmy pressure.
+    Bas baat karenge.
+  </p>
+  <p class="quote">
+    "Mujhe tumhe convince nahi karna.<br>
+    Mujhe bas tumhe choose karne ka chance dena hai." ❤️
+  </p>
+</section>
+
+<section class="card reveal final">
+  <div class="spark">✨</div>
+  <p class="tag">LAST BUTTON. SERIOUSLY. 😭</p>
+  <h2>Agar ye website dekh ke thoda sa bhi smile aayi...</h2>
+  <p>
+    aur agar kabhi tumhe mujhse baat karne ka mann kare,
+    <b>call kar dena.</b>
+  </p>
+
+  <a class="callbtn" href="tel:+91XXXXXXXXXX">📞 Call me if you want ❤️</a>
+  <p class="tiny">
+    Phone khud se secretly call nahi kar sakta 😭 —
+    button tap karne par tumhara phone dialer kholega.
+  </p>
+
+  <button class="finishbtn" onclick="finish()">Okay, bas itna hi tha 🥹</button>
+</section>
+
+</main>
+
+<section id="end" class="end">
+  <canvas id="confetti"></canvas>
+  <div class="endbox">
+    <div class="huge">❤️</div>
+    <div class="pill">THAT'S IT, PANUU.</div>
+    <h1>Take your time.</h1>
+    <p>
+      Jo tumhara dil kahe, wahi karna.<br>
+      Main bas chahta tha ki tumhe pata ho<br>
+      <b>how I actually feel.</b>
+    </p>
+    <p class="bigend">No pressure. No chasing. Just one honest chance. 🫶</p>
+    <button class="again" onclick="closeEnd()">Back to the letter</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+*{box-sizing:border-box}
+:root{--pink:#ff4f9e;--hot:#ff2e7d;--ink:#41162e}
+html{scroll-behavior:smooth}
+body{
+margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;
+background:radial-gradient(circle at 8% 8%,#fff 0 5%,transparent 25%),
+radial-gradient(circle at 90% 20%,#ffd1e3 0 6%,transparent 27%),
+linear-gradient(135deg,#ffd7e8,#fff5f9 52%,#ffd1e5);
+min-height:100vh
+}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-45px;animation:float 6s linear forwards}
+@keyframes float{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(730px,92%);margin:auto;padding:25px 0 90px}
+.card{
+background:#ffffffdf;border:1px solid #ffffff;border-radius:30px;padding:30px;
+margin:20px 0;text-align:center;box-shadow:0 20px 60px #6c174520;backdrop-filter:blur(12px)
+}
+.hero{padding:50px 25px}
+.pill{display:inline-block;background:#ffe0ed;color:#a72160;border-radius:999px;padding:8px 14px;font-size:12px;font-weight:900;letter-spacing:1px}
+h1{font-size:clamp(45px,10vw,78px);line-height:.95;margin:18px 0;color:var(--hot)}
+h2{font-size:clamp(27px,6vw,40px);margin:15px 0}
+p{font-size:18px;line-height:1.65}
+.lead{font-size:20px}
+.tiny{font-size:13px;opacity:.62}
+.tag{font-size:12px;letter-spacing:2px;font-weight:900;color:#bd2b6b}
+.mainbtn,.softbtn,.callbtn,.finishbtn,.again,.music{
+border:0;border-radius:999px;cursor:pointer;font-weight:900;transition:.2s;text-decoration:none
+}
+.mainbtn{background:linear-gradient(135deg,var(--pink),var(--hot));color:#fff;padding:16px 25px;font-size:17px;box-shadow:0 12px 30px #ff4f9e55}
+.mainbtn:hover,.callbtn:hover,.finishbtn:hover{transform:translateY(-3px)}
+.music{position:fixed;right:18px;top:18px;width:50px;height:50px;background:#fff;color:#c3266c;font-size:21px;z-index:20;box-shadow:0 8px 25px #0002}
+img{width:100%;display:block;border-radius:22px;margin:15px 0}
+.caption{opacity:.7;font-size:14px}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+.letter p{text-align:left}
+.highlight{background:linear-gradient(135deg,#fff,#ffe8f2)}
+.pink{color:var(--hot)}
+.poll label{
+display:block;text-align:left;padding:13px 15px;margin:9px 0;background:#fff0f6;
+border:1px solid #ffd5e4;border-radius:15px;cursor:pointer
+}
+.poll input{accent-color:var(--hot);margin-right:9px}
+.softbtn{margin-top:12px;background:#fff;color:#b32062;border:1px solid #ffc6da;padding:13px 19px}
+.result{display:none;margin-top:16px;padding:15px;border-radius:17px;background:#fff0f6;font-size:16px;line-height:1.5}
+.q{text-align:left;background:#fff0f6;padding:17px;border-radius:18px;margin:12px 0}
+select{display:block;width:100%;margin-top:9px;padding:11px;border:1px solid #ffd0df;border-radius:12px;background:#fff;color:var(--ink)}
+.quote{background:#fff0f6;border-radius:20px;padding:18px;font-size:19px}
+.blush{background:linear-gradient(135deg,#fff,#ffe9f3)}
+.final{padding-bottom:35px}
+.spark{font-size:48px}
+.callbtn{display:inline-block;background:linear-gradient(135deg,#ff4f9e,#ff287c);color:#fff;padding:16px 24px;font-size:17px;box-shadow:0 12px 28px #ff4f9e55}
+.finishbtn{margin-top:15px;background:#3f162e;color:#fff;padding:13px 20px}
+.end{display:none;position:fixed;inset:0;z-index:50;align-items:center;justify-content:center;padding:20px;background:radial-gradient(circle,#ff9fc7,#ff3c88 48%,#72133f)}
+.end.show{display:flex}
+#confetti{position:absolute;inset:0;width:100%;height:100%}
+.endbox{position:relative;z-index:2;width:min(600px,94%);padding:40px 25px;text-align:center;color:#fff;background:#ffffff18;border:1px solid #ffffff55;border-radius:35px;backdrop-filter:blur(15px);box-shadow:0 30px 100px #32001d88;animation:pop .6s cubic-bezier(.2,1.5,.4,1)}
+.huge{font-size:90px;animation:pulse 1s infinite alternate}
+@keyframes pulse{to{transform:scale(1.12)}}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+.endbox h1{color:#fff}
+.bigend{font-size:20px}
+.again{background:#fff;color:#9b225c;padding:12px 20px}
+@media(max-width:560px){.card{padding:23px}.letter p{text-align:left}}
